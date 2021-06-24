@@ -1,6 +1,6 @@
-import app from "./server";
+import createServer from "./factories/server";
+import routes from "./routes";
 
-const port = process.env.PORT || 4000;
-app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
-});
+const server = createServer(routes);
+
+server.start();
