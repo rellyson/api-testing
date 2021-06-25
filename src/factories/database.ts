@@ -1,6 +1,14 @@
 import { Database, RunResult } from "sqlite3";
 import { Client, PoolClient, QueryResult } from "pg";
 
+/**
+ * Database connection factory.
+ *
+ * @param type - The database to establish connection.
+ * @param connectionString - Database connection address.
+ * @returns An object containing the factory methods.
+ *
+ */
 const createDatabase = (
   type: "sqlite" | "postgres",
   connectionString: string

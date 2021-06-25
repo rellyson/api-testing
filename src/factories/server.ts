@@ -1,6 +1,14 @@
 import express, { Application, Router } from "express";
 import { Server } from "http";
 
+
+/**
+ * API server factory.
+ *
+ * @param routes - The routes to be used in the  API server.
+ * @returns An object containing the factory methods.
+ *
+ */
 const createServer = (routes: Router) => {
   let server: Server;
 
