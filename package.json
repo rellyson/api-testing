@@ -9,11 +9,14 @@
   "scripts": {
     "tsc": "tsc",
     "start": "ts-node src/index.ts",
-    "test": "jest --runInBand --detectOpenHandles --colors --verbose --reporters=default"
+    "test": "jest --runInBand --detectOpenHandles --colors --verbose --reporters=default",
+    "test:coverage": "jest --runInBand --detectOpenHandles --colors --verbose --coverage --coverageReporters=html"
   },
   "dependencies": {
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
+    "pg": "^8.6.0",
+    "sqlite3": "^5.0.2",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.4"
   },
@@ -22,6 +25,8 @@
     "@types/jest": "^26.0.23",
     "@types/node": "^15.12.4",
     "@types/node-fetch": "^2.5.10",
+    "@types/pg": "^8.6.0",
+    "@types/sqlite3": "^3.1.7",
     "@types/supertest": "^2.0.11",
     "jest": "^27.0.5",
     "jest-junit": "^12.2.0",
